@@ -1,0 +1,4 @@
+.DS_Store
+backup/
+vim/backups/
+vim/bundle/
