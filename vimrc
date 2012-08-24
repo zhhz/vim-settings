@@ -18,6 +18,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set mat=2                       "How many tenths of a second to blink
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -27,8 +28,16 @@ set hidden
 "turn on syntax highlighting
 syntax on
 
+"Set magic on
+set magic
+
+"show matching bracets
+set showmatch
 " ================ Search Settings  =================
 
+"Ignore case when searching
+set ignorecase
+set smartcase        "case-sensitve only if there is a capital leter in the search expression
 set incsearch        "Find the next match as we type the search
 set hlsearch         "Hilight searches by default
 set viminfo='100,f1  "Save up to 100 marks, enable capital marks
@@ -60,8 +69,9 @@ set expandtab
 filetype plugin on
 filetype indent on
 
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \
+" make tabs and trailing spaces visible
+" set list listchars=tab:>-,trail:.eol:
+set list listchars=tab:>-
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -78,10 +88,7 @@ set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
-set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
-" set wildignore+=vendor/rails/**
-" set wildignore+=vendor/cache/**
 set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
@@ -89,6 +96,21 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
 
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set scrolloff=6         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
+
+" Explicitly set 256 color support
+set t_Co=256
+
+set cursorline
+
+" Set temporary directory (don't litter local dir with swp/tmp files)
+set directory=/tmp
+
+" integrate ack and vim by using the :grep function of vim
+set grepprg=ack
+
+"The commandbar is 2 high
+set cmdheight=1
+

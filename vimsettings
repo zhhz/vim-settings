@@ -6,80 +6,83 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 help () {
-    cat<<EOF
+  cat<<EOF
 
 Usage: vimsettings [install|uninstall|upgrade|help]
 
 Commands:
-    
-    install    installs from the git repo
-    uninstall  restores original system vim config
-    upgrade    clobbers existing setup and installs fresh from git
-    help       print this msg
+
+  install    installs from the git repo
+  uninstall  restores original system vim config
+  upgrade    clobbers existing setup and installs fresh from git
+  help       print this msg
 
 EOF
 }
 
 # backs default home vim up
 backup () {
-    if [ -e $DIR/backup ]
-    then 
-        echo 'skipping backup'
-    else
-        mkdir -p $DIR/backup
-        mv ~/.vimrc $DIR/backup/.vimrc
-        mv ~/.vim $DIR/backup/.vim
-    fi
+  if [ -e $DIR/backup ]
+  then 
+    echo 'skipping backup'
+  else
+    mkdir -p $DIR/backup
+    mv ~/.vimrc $DIR/backup/.vimrc
+    mv ~/.vim $DIR/backup/.vim
+  fi
 }
 
 # copy in pathogen and then clone in bundles
 install () {
-    backup
+  backup
 
-    # symbol link vimrc and vim
-    ln -s $DIR/vimrc ~/.vimrc
-    ln -s $DIR/vim ~/.vim
+  # symbol link vimrc and vim
+  ln -s $DIR/vimrc ~/.vimrc
+  ln -s $DIR/vim ~/.vim
 
-    # add in bundles from bundle.txt
-    bundles=$(cat $DIR/bundles)
-    cd ~/.vim/bundle
-    for repo in $bundles; do
-        git clone $repo
-    done
+  # add in bundles from bundles
+  mkdir -p $DIR/vim/bundle
+  bundles=$(cat $DIR/bundles)
+  cd ~/.vim/bundle
+  for repo in $bundles; do
+    git clone $repo
+  done
 }
 
 # if backup exists clobbers home vim and copies in backup
 uninstall () {
-    if [ -e $DIR/backup ]
-    then
-        rm ~/.vimrc
-        rm -rf ~/.vim
-        mv $DIR/backup/.vimrc ~/.vimrc
-        mv $DIR/backup/.vim ~/.vim
-        rm -rf $DIR/backup
-    fi
+  if [ -e $DIR/backup ]
+  then
+    rm ~/.vimrc
+    rm ~/.vim
+    mv $DIR/backup/.vimrc ~/.vimrc
+    mv $DIR/backup/.vim ~/.vim
+    rm -rf $DIR/backup
+    rm -rf $DIR/vim/bundle
+    rm -rf $DIR/vim/backups
+  fi
 }
 
 # kills everything, pulls latest from git, installs it
 upgrade () {
-    uninstall
-    git pull
-    install
+  uninstall
+  git pull
+  install
 }
 
 # fucking cryptic bash, test for a valid arg and execute it if so; otherwise show the help
 if [ "$1" != "" ]; then
-    wl=(install uninstall upgrade help)
-    for i in "${wl[@]}"
-    do
-        if [ "$i" == "$1" ]
-        then
-            $1
-            exit 0
-        fi
-    done
+  wl=(install uninstall upgrade help)
+  for i in "${wl[@]}"
+  do
+    if [ "$i" == "$1" ]
+    then
+      $1
+      exit 0
+    fi
+  done
 fi
 
 # show a flailer some help
-help 
+help
 exit 0

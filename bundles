@@ -1,2 +1,14 @@
 https://github.com/tpope/vim-pathogen
 https://github.com/scrooloose/nerdtree.git
+https://github.com/scrooloose/nerdcommenter.git
+https://github.com/altercation/vim-colors-solarized.git
+https://github.com/Shougo/neocomplcache.git
+https://github.com/nathanaelkane/vim-indent-guides
+https://github.com/kien/ctrlp.vim
+https://github.com/corntrace/bufexplorer.git
+https://github.com/tpope/vim-surround.git
+https://github.com/vim-scripts/taglist.vim.git
+https://github.com/vim-scripts/YankRing.vim
+https://github.com/vim-scripts/TeTrIs.vim.git
+https://github.com/vim-scripts/ZoomWin.git
+https://github.com/skwp/vim-conque
