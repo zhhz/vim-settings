@@ -27,9 +27,34 @@ backup () {
     echo 'skipping backup'
   else
     mkdir -p $DIR/backup
-    mv ~/.vimrc $DIR/backup/.vimrc
-    mv ~/.vim $DIR/backup/.vim
+
+    if [ -e ~/.vimrc ]
+    then
+      mv ~/.vimrc $DIR/backup/.vimrc
+    fi
+
+    if [ -e ~/.vim ]
+    then 
+      mv ~/.vim $DIR/backup/.vim
+    fi
+
+    if [ -e ~/.editrc ]
+    then
+      mv ~/.editrc $DIR/backup/.editrc
+    fi
+
+    if [ -e ~/.inputrc ]
+    then
+      mv ~/.inputrc $DIR/backup/.inputrc
+    fi
   fi
+}
+
+# vimify
+vimify () {
+  # symbol link vimrc and vim
+  ln -s $DIR/vimify/editrc ~/.editrc
+  ln -s $DIR/vimify/inputrc  ~/.inputrc
 }
 
 # copy in pathogen and then clone in bundles
@@ -44,19 +69,49 @@ install () {
   mkdir -p $DIR/vim/bundle
   bundles=$(cat $DIR/bundles)
   cd ~/.vim/bundle
+
+  # error handling here
   for repo in $bundles; do
     git clone $repo
   done
+
+  vimify
 }
 
 # if backup exists clobbers home vim and copies in backup
 uninstall () {
   if [ -e $DIR/backup ]
   then
-    rm ~/.vimrc
-    rm ~/.vim
-    mv $DIR/backup/.vimrc ~/.vimrc
-    mv $DIR/backup/.vim ~/.vim
+    if [ -e ~/.vimrc ]
+    then
+      rm ~/.vimrc
+    fi
+
+    if [ -e ~/.vim ]
+    then
+      rm ~/.vim
+    fi
+
+    if [ -e $DIR/backup/.vimrc ]
+    then
+      mv $DIR/backup/.vimrc ~/.vimrc
+    fi
+
+    if [ -e $DIR/backup/.vim ]
+    then
+      mv $DIR/backup/.vim ~/.vim
+    fi
+
+    if [ -e $DIR/backup/.editrc ]
+    then
+      mv $DIR/backup/.editrc ~/.editrc
+    fi
+
+    if [ -e $DIR/backup/.inputrc ]
+    then
+      mv $DIR/backup/.inputrc ~/.inputrc
+    fi
+
     rm -rf $DIR/backup
     rm -rf $DIR/vim/bundle
     rm -rf $DIR/vim/backups
