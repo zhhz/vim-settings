@@ -49,8 +49,8 @@ map <F6> :call <SID>ToggleColorColumn()<cr>
 """"""""""""""""""""""""""""""
 " Statusline
 """"""""""""""""""""""""""""""
-"Always hide the statusline
-set laststatus=2
+" Always hide the statusline
+" set laststatus=2
 
 function! CurDir()
   let curdir = substitute(getcwd(), '/Users/zhonghai/', "~/", "g")
@@ -86,3 +86,4 @@ if has('statusline')
   " set statusline+=%=%-14.(Line:\ %l\ of\ %L\ [%p%%]\ -\ Col:\ %c%V%)
   set statusline+=%=%-14.(Line:\ %l\/\%L\ -\ Col:\ %c%V%)
 endif
+
