@@ -31,8 +31,14 @@ nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-j> <C-w>j
 
-" Moving line up/down  META + j/k  Under iTerm, 
-" map the left option key to META
+" Under iterm,  map the left option key to META
+" Resize windows with u,i,o and p
+nnoremap <M-u> <C-w>+
+nnoremap <M-i> <C-w>-
+nnoremap <M-o> <C-w><
+nnoremap <M-p>  <C-w>>
+
+" Moving line up/down  META + j/k
 nmap <M-j> mz:m+<cr>z
 nmap <M-k> mz:m-2<cr>z
 vmap <M-k> :m'<-2<cr>>my`<mzgv`yo`z
@@ -45,4 +51,3 @@ set pastetoggle=<F5>
 "with ,z and ,x
 nnoremap <silent> ,z :bp<CR>
 nnoremap <silent> ,x :bn<CR>
-
