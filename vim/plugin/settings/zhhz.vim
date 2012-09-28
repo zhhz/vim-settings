@@ -87,3 +87,8 @@ if has('statusline')
   set statusline+=%=%-14.(Line:\ %l\/\%L\ -\ Col:\ %c%V%)
 endif
 
+" Remove the Windows ^M
+" noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+" this works for me:
+" :%s//\r/g
+" NOTE: to input , you have to press ctrl + v then followed by ctrl + m
