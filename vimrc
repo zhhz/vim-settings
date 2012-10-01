@@ -43,7 +43,6 @@ set hlsearch         "Hilight searches by default
 set viminfo='100,f1  "Save up to 100 marks, enable capital marks
 
 " ================ Turn Off Swap Files ==============
-
 set noswapfile
 set nobackup
 set nowb
