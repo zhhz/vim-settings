@@ -5,5 +5,5 @@ let g:RefreshRunningBrowserDefault = 'firefox'
 
 let g:RefreshRunningBrowserReturnFocus = 1
 
-map <leader>r :RRB<CR>
+map <silent> ,r :RRB<CR>
 
