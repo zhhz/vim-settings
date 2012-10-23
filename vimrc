@@ -112,4 +112,3 @@ set grepprg=ack
 
 "The commandbar is 2 high
 set cmdheight=1
-
