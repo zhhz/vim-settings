@@ -23,11 +23,6 @@ function! <SID>BufcloseCloseIt()
   endif
 endfunction
 
-" create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-K> <%=   %><Esc>3hi
-
-" create <%= foo %> erb tags using Ctrl-j in edit mode
-imap <silent> <C-J> <%  %><Esc>2hi
 
 " toggle colored right border after 120 chars
 set colorcolumn=120
