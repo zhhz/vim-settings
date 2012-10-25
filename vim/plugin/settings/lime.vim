@@ -24,6 +24,7 @@ function Screen_Vars()
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vmap <C-c><C-c> "ry :call Send_to_Screen(@r)<CR>
-nmap <C-c><C-c> vip<C-c><C-c>
-nmap <C-c>v :call Screen_Vars()<CR>
+" tmp commented out because it confilict with dwm
+"vmap <C-c><C-c> "ry :call Send_to_Screen(@r)<CR>
+"nmap <C-c><C-c> vip<C-c><C-c>
+"nmap <C-c>v :call Screen_Vars()<CR>
