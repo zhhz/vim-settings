@@ -48,8 +48,8 @@ set pastetoggle=<F5>
 nnoremap <silent> ,z :bp<CR>
 nnoremap <silent> ,x :bn<CR>
 
-" map ' go to the end of the line
-nmap ' $
+" map ' go to the end of the line and put it in append mode
+nmap ' $a
 " yank from the cursor to the end of the line
 nnoremap Y y$
 
