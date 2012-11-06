@@ -15,11 +15,18 @@ F7 - toggle background
 
 :sp - horizon split
 :vs - vertical split
-C-W c - close a window
+C-W c  or Ctrl + c - close a window
 CTRL + h/j/k/l - move between windows
-META + u/i/o/p - resize windows with the mata/option key
+META + h/j/k/l - resize windows with the mata/option key
 
+CTRL + n - stack current and open a new window and focus on it
+CTRL + space - focus on current window
+
+ii - in edit mode, this is mapped to ESC
 
 ,ig - toggle indent
 ,y  - yangk ring
 
+
+# teris game
+,te
