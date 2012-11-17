@@ -2,8 +2,8 @@
 let mapleader = ","
 
 " map ii to esc
-imap ii <C-[>
-cmap ii <C-[>
+" imap ii <C-[>
+" cmap ii <C-[>
 
 "Fast reloading of the .vimrc
 map <leader>s :source ~/.vimrc<cr>
