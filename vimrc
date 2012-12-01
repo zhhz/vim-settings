@@ -15,6 +15,7 @@ call pathogen#helptags()
 " ================ General Config ====================
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
+set complete=.,w,b,u,U,t,i,d    "Do lots of scanning on tab completion
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
@@ -37,6 +38,17 @@ set magic
 "show matching bracets
 set showmatch
 
+" viminfo: remember certain things when we exit
+" (http://vimdoc.sourceforge.net/htmldoc/usr_21.html)
+"   %    : saves and restores the buffer list
+"   '100 : marks will be remembered for up to 30 previously edited files
+"   /100 : save 100 lines from search history
+"   h    : disable hlsearch on start
+"   "500 : save up to 500 lines for each register
+"   :100 : up to 100 lines of command-line history will be remembered
+"   n... : where to save the viminfo files
+set viminfo=%100,'100,/100,h,\"500,:100,n~/.vim/viminfo
+
 " ================ Search Settings  =================
 "Ignore case when searching
 set ignorecase
@@ -53,7 +65,6 @@ set nowb
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
-
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
