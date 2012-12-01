@@ -1,3 +1,6 @@
+﻿set encoding=utf-8
+set fileencoding=utf-8
+set bomb
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -8,8 +11,8 @@ set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-" ================ General Config ====================
 
+" ================ General Config ====================
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -33,8 +36,8 @@ set magic
 
 "show matching bracets
 set showmatch
-" ================ Search Settings  =================
 
+" ================ Search Settings  =================
 "Ignore case when searching
 set ignorecase
 set smartcase        "case-sensitve only if there is a capital leter in the search expression
@@ -56,7 +59,6 @@ set undodir=~/.vim/backups
 set undofile
 
 " ================ Indentation ======================
-
 set autoindent
 set smartindent
 set smarttab
@@ -69,8 +71,9 @@ filetype plugin on
 filetype indent on
 
 " make tabs and trailing spaces visible
-" set list listchars=tab:>-,trail:.eol:
-set list listchars=tab:>-
+hi NonText ctermfg=7 guifg=gray
+set list                       " Display unprintable characters
+set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -82,7 +85,6 @@ set nofoldenable        "dont fold by default
 set foldlevel=1
 
 " ================ Completion =======================
-
 set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
@@ -94,7 +96,6 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
-
 set scrolloff=6         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
@@ -112,3 +113,11 @@ set grepprg=ack
 
 "The commandbar is 2 high
 set cmdheight=1
+
+" ==== mouse settings ===============================
+"Have the mouse enabled all the time:
+set mouse=a
+" hide the mouse when typing
+set mousehide  
+" this makes the mouse paste a block of text without formatting it(good for code)
+map <MouseMiddle> <esc>"*p">>"
