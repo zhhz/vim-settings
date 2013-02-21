@@ -39,8 +39,6 @@ function! s:ToggleColorColumn()
 endfunction
 map <F6> :call <SID>ToggleColorColumn()<cr>
 
-
-
 """"""""""""""""""""""""""""""
 " Statusline
 """"""""""""""""""""""""""""""
@@ -52,21 +50,12 @@ function! CurDir()
   return curdir
 endfunction
 
-function! RvmStatusLine()
-  if ! exists('g:rvm_prompt')
-    let g:rvm_prompt = system("~/.rvm/bin/rvm-prompt v g")
-    let g:rvm_prompt = substitute(g:rvm_prompt, '\n', '', 'g')
-  endif
-  return '['.g:rvm_prompt.']'
-endfunction
-
 "Format the statusline
 "set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 "set statusline=\ %F%m%r%h\ %w\ Line:\ %l/%L:%c
 " set statusline=\ %F%m%r%h\ %w%{fugitive#statusline()}\ Line:\ %l/%L:%c
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=\ %{RvmStatusLine()}
 " set statusline+=%*
 "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "
@@ -77,7 +66,6 @@ if has('statusline')
   "set statusline+=\ [%{getcwd()}]
   " set statusline+=\ [%{CurDir()}]
   " set statusline+=%{fugitive#statusline()}
-  " set statusline+=\ %{RvmStatusLine()}
   " set statusline+=%=%-14.(Line:\ %l\ of\ %L\ [%p%%]\ -\ Col:\ %c%V%)
   set statusline+=%=%-14.(Line:\ %l\/\%L\ -\ Col:\ %c%V%)
 endif

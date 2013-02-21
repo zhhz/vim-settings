@@ -4,5 +4,5 @@ let g:ConqueTerm_Color = 2
 let g:ConqueTerm_ReadUnfocused = 1 " update conqueterm buffer while we're not looking (for running tests)
 
 " Open up a variety of commands in the ConqueTerm
-nmap <silent> <Leader>cc :execute 'ConqueTermSplit script/console --irb=pry'<CR>
-nmap <silent> <Leader>ct :execute 'ConqueTermSplit bash'<CR>
+" nmap <silent> <Leader>cc :execute 'ConqueTermSplit script/console --irb=pry'<CR>
+" nmap <silent> <leader>cb :execute 'ConqueTermSplit bash'<CR>

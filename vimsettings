@@ -23,7 +23,7 @@ EOF
 # backs default home vim up
 backup () {
   if [ -e $DIR/backup ]
-  then 
+  then
     echo 'skipping backup'
   else
     mkdir -p $DIR/backup
@@ -34,7 +34,7 @@ backup () {
     fi
 
     if [ -e ~/.vim ]
-    then 
+    then
       mv ~/.vim $DIR/backup/.vim
     fi
 
@@ -47,6 +47,11 @@ backup () {
     then
       mv ~/.inputrc $DIR/backup/.inputrc
     fi
+
+    if [ -e ~/.tmux.conf ]
+    then
+      mv ~/.tmux.conf $DIR/backup/.tmux.conf
+    fi
   fi
 }
 
@@ -55,6 +60,12 @@ vimify () {
   # symbol link vimrc and vim
   ln -s $DIR/vimify/editrc ~/.editrc
   ln -s $DIR/vimify/inputrc  ~/.inputrc
+}
+
+# tmux conf
+tmuxify () {
+  # symbol link
+  ln -s $DIR/tmux/tmux.conf ~/.tmux.conf
 }
 
 # copy in pathogen and then clone in bundles
@@ -68,7 +79,7 @@ install () {
   # add in bundles from bundles
   mkdir -p $DIR/vim/bundle
   bundles=$(cat $DIR/bundles)
-  cd ~/.vim/bundle
+  cd $DIR/vim/bundle
 
   # error handling here
   for repo in $bundles; do
@@ -76,6 +87,7 @@ install () {
   done
 
   vimify
+  tmuxify
 }
 
 # if backup exists clobbers home vim and copies in backup
@@ -125,7 +137,7 @@ upgrade () {
   install
 }
 
-# fucking cryptic bash, test for a valid arg and execute it if so; otherwise show the help
+# bash, test for a valid arg and execute it if so; otherwise show the help
 if [ "$1" != "" ]; then
   wl=(install uninstall upgrade help)
   for i in "${wl[@]}"

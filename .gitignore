@@ -3,3 +3,4 @@ backup/
 vim/backups/
 vim/bundle/
 vim/.netrwhist
+vim/viminfo

@@ -26,12 +26,11 @@ nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-j> <C-w>j
 
-" Under iterm,  map the left option key to META
 " Resize windows with u,i,o and p
-nnoremap <M-j> <C-w>-
-nnoremap <M-k> <C-w>+
-nnoremap <M-h> <C-w><
-nnoremap <M-l>  <C-w>>
+nnoremap <silent> <C-w> <C-w>-
+nnoremap <silent> <C-e> <C-w>+
+nnoremap <silent> <C-q> <C-w><
+nnoremap <silent> <C-r> <C-w>>
 
 " commented out it's conflict with the one above
 " Moving line up/down  META + j/k

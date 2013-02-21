@@ -15,5 +15,5 @@ vmap <C-_> <ESC>:call NERDComment(1, "toggle")<CR>
 nmap <leader>/ :call NERDComment(0, "toggle")<CR>
 vmap <leader>/ <ESC>:call NERDComment(1, "toggle")<CR>
 " but maybe <leader>C is nicer to type?
-nmap <leader>C  :call NERDComment(0, "toggle")<CR>
-vmap <leader>C <ESC>:call NERDComment(1, "toggle")<CR>
+" nmap <leader>C  :call NERDComment(0, "toggle")<CR>
+" vmap <leader>C <ESC>:call NERDComment(1, "toggle")<CR>

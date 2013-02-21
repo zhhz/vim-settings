@@ -1,6 +1,7 @@
 ﻿set encoding=utf-8
 set fileencoding=utf-8
 set bomb
+
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -30,7 +31,7 @@ set mat=2                       "How many tenths of a second to blink
 set hidden
 
 "turn on syntax highlighting
-syntax on
+syntax enable
 
 "Set magic on
 set magic
@@ -55,9 +56,10 @@ set ignorecase
 set smartcase        "case-sensitve only if there is a capital leter in the search expression
 set incsearch        "Find the next match as we type the search
 set hlsearch         "Hilight searches by default
-set viminfo='100,f1  "Save up to 100 marks, enable capital marks
 
 " ================ Turn Off Swap Files ==============
+" Set temporary directory (don't litter local dir with swp/tmp files)
+" set directory=/tmp
 set noswapfile
 set nobackup
 set nowb
@@ -65,9 +67,9 @@ set nowb
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
-silent !mkdir ~/.vim/backups > /dev/null 2>&1
-set undodir=~/.vim/backups
-set undofile
+" silent !mkdir ~/.vim/undos > /dev/null 2>&1
+" set undodir=~/.vim/undos
+" set undofile
 
 " ================ Indentation ======================
 set autoindent
@@ -81,10 +83,13 @@ set expandtab
 filetype plugin on
 filetype indent on
 
-" make tabs and trailing spaces visible
-hi NonText ctermfg=7 guifg=gray
+" changes non printing characters to a visible character that's configured in listchars
 set list                       " Display unprintable characters
-set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
+" make tabs and trailing spaces visible
+" set listchars=tab:▸\ ,trail:•,extends:»,precedes:«,eol:¶
+" set listchars=tab:>-,eol:¶
+set listchars=tab:»·,trail:·
+hi NonText ctermfg=7 guifg=gray
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -116,9 +121,6 @@ set t_Co=256
 
 set cursorline
 
-" Set temporary directory (don't litter local dir with swp/tmp files)
-set directory=/tmp
-
 " integrate ack and vim by using the :grep function of vim
 set grepprg=ack
 
@@ -129,6 +131,6 @@ set cmdheight=1
 "Have the mouse enabled all the time:
 set mouse=a
 " hide the mouse when typing
-set mousehide  
+set mousehide
 " this makes the mouse paste a block of text without formatting it(good for code)
 map <MouseMiddle> <esc>"*p">>"

@@ -27,6 +27,21 @@ ii - in edit mode, this is mapped to ESC
 ,ig - toggle indent
 ,y  - yangk ring
 
-
-# teris game
+" teris game
 ,te
+
+" refresh firefox browser
+,r
+
+" split a bash console
+,cb
+
+" surround
+,#",)([{
+
+"Go to last edit location with ,.
+,.
+
+" the insert mode the first quote will autoclose so you'll get 'foo' and hitting <c-a> will
+" put the cursor right after the quote
+Ctrl-a
