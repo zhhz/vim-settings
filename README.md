@@ -6,9 +6,10 @@ A quick settings for vim
 
 F2 - toggle NERDTree
 F3 - toggle tag list
+F4 - screen shell vertical
 F5 - toggle paste mode
 F6 - toggle column
-F7 - toggle background
+<!-- F7 - toggle background -->
 
 ,bd - delete current buffer
 ,be - buffer explorer
@@ -17,6 +18,7 @@ F7 - toggle background
 :vs - vertical split
 C-W c  or Ctrl + c - close a window
 CTRL + h/j/k/l - move between windows
+" not work on iterm2
 META + h/j/k/l - resize windows with the mata/option key
 
 CTRL + n - stack current and open a new window and focus on it

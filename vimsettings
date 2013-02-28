@@ -62,12 +62,6 @@ vimify () {
   ln -s $DIR/vimify/inputrc  ~/.inputrc
 }
 
-# tmux conf
-tmuxify () {
-  # symbol link
-  ln -s $DIR/tmux/tmux.conf ~/.tmux.conf
-}
-
 # copy in pathogen and then clone in bundles
 install () {
   backup
@@ -87,7 +81,6 @@ install () {
   done
 
   vimify
-  tmuxify
 }
 
 # if backup exists clobbers home vim and copies in backup
