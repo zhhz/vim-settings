@@ -1,4 +1,4 @@
-"Set mapleader
+﻿"Set mapleader
 let mapleader = ","
 
 " map ii to esc
@@ -26,11 +26,11 @@ nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-j> <C-w>j
 
-" Resize windows with u,i,o and p
-nnoremap <silent> <C-w> <C-w>-
-nnoremap <silent> <C-e> <C-w>+
-nnoremap <silent> <C-q> <C-w><
-nnoremap <silent> <C-r> <C-w>>
+" Resize windows with u,i,m and ,
+nnoremap <silent> <C-u> <C-w>-
+nnoremap <silent> <C-i> <C-w>+
+" nnoremap <silent> <C-i> <C-w><
+" nnoremap <silent> <C-m> <C-w>>
 
 " commented out it's conflict with the one above
 " Moving line up/down  META + j/k
