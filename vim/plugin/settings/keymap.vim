@@ -90,7 +90,7 @@ vmap ,{ c{<C-R>"}<ESC>
 " gary bernhardt's hashrocket
 imap <silent> <C-l> <space>=><space>
 " create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-K> <%=  %><Esc>3hi
+imap <silent> <C-K> <%=  %><Esc>2hi
 " create <%= foo %> erb tags using Ctrl-j in edit mode
 imap <silent> <C-J> <%  %><Esc>2hi
 
