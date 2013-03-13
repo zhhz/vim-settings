@@ -20,10 +20,10 @@ set complete=.,w,b,u,U,t,i,d    "Do lots of scanning on tab completion
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
-set mat=2                       "How many tenths of a second to blink
+set gcr=a:blinkon0              "Disable cursor blink
+" set mat=2                       "How many tenths of a second to blink
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -48,7 +48,9 @@ set showmatch
 "   "500 : save up to 500 lines for each register
 "   :100 : up to 100 lines of command-line history will be remembered
 "   n... : where to save the viminfo files
-set viminfo=%100,'100,/100,h,\"500,:100,n~/.vim/viminfo
+
+" set viminfo=%100,'100,/100,h,\"500,:100,n~/.vim/viminfo
+set viminfo='100,/100,h,\"500,:100,n~/.vim/viminfo " I don't want to remember the buffers, I'm using the mks command
 
 " ================ Search Settings  =================
 "Ignore case when searching
@@ -101,8 +103,8 @@ set nofoldenable        "dont fold by default
 set foldlevel=1
 
 " ================ Completion =======================
-set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildmode=list:longest
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
 set wildignore+=*DS_Store*
@@ -112,7 +114,7 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
-set scrolloff=6         "Start scrolling when we're 8 lines away from margins
+set scrolloff=6         "Start scrolling when we're 6 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 

@@ -13,6 +13,8 @@ F6 - toggle column
 
 ,bd - delete current buffer
 ,be - buffer explorer
+,bs - horizen split open
+,bv - vertical split open
 
 :sp - horizon split
 :vs - vertical split
@@ -47,3 +49,6 @@ ii - in edit mode, this is mapped to ESC
 " the insert mode the first quote will autoclose so you'll get 'foo' and hitting <c-a> will
 " put the cursor right after the quote
 Ctrl-a
+
+" show git diff gugger
+,g
