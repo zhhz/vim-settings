@@ -48,9 +48,8 @@ set showmatch
 "   "500 : save up to 500 lines for each register
 "   :100 : up to 100 lines of command-line history will be remembered
 "   n... : where to save the viminfo files
-
-" set viminfo=%100,'100,/100,h,\"500,:100,n~/.vim/viminfo
-set viminfo='100,/100,h,\"500,:100,n~/.vim/viminfo " I don't want to remember the buffers, I'm using the mks command
+set viminfo=%100,'100,/100,h,\"500,:100,n~/.vim/viminfo
+" set viminfo='100,/100,h,\"500,:100,n~/.vim/viminfo " I don't want to remember the buffers, I'm using the mks command
 
 " ================ Search Settings  =================
 "Ignore case when searching
@@ -61,10 +60,10 @@ set hlsearch         "Hilight searches by default
 
 " ================ Turn Off Swap Files ==============
 " Set temporary directory (don't litter local dir with swp/tmp files)
-" set directory=/tmp
-set noswapfile
-set nobackup
-set nowb
+set directory=/tmp
+" set noswapfile
+" set nobackup
+" set nowb
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
