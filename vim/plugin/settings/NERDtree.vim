@@ -11,7 +11,7 @@ let NERDTreeIgnore=['\~$', '\.DS_Store']
 let NERDTreeChDirMode=2
 
 let g:NERDTreeWinSize  = 25
-let g:NERDTreeWinPos   = "right"
+" let g:NERDTreeWinPos   = "right"
 
 " Disable the scrollbars (NERDTree)
 set guioptions-=r
