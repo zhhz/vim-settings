@@ -52,3 +52,6 @@ Ctrl-a
 
 " show git diff gugger
 ,g
+
+" format json
+,fj

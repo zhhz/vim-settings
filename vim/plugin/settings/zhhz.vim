@@ -139,3 +139,11 @@ func! DeleteEmptyPairs()
   endif
 endfunc
 inoremap <expr> <BS> DeleteEmptyPairs()
+
+
+" format json
+map <leader>fj :call FormatJSON()<cr>
+" format json text
+function! FormatJSON()
+  :%!python -m json.tool
+endfunction
