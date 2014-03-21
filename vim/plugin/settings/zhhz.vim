@@ -42,8 +42,7 @@ map <F6> :call <SID>ToggleColorColumn()<cr>
 """"""""""""""""""""""""""""""
 " Statusline
 """"""""""""""""""""""""""""""
-" Always hide the statusline
-" set laststatus=2
+set laststatus=2
 
 function! CurDir()
   let curdir = substitute(getcwd(), '/Users/zhonghai/', "~/", "g")
@@ -59,16 +58,17 @@ endfunction
 " set statusline+=%*
 "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "
-if has('statusline')
-  set statusline=%<%f\ 
-  set statusline+=%w%h%m%r 
+"commented out in favor of vim-airline
+"if has('statusline')
+ " set statusline=%<%f\ 
+ " set statusline+=%w%h%m%r 
   "set statusline+=\ [%{&ff}/%Y]  
   "set statusline+=\ [%{getcwd()}]
   " set statusline+=\ [%{CurDir()}]
   " set statusline+=%{fugitive#statusline()}
   " set statusline+=%=%-14.(Line:\ %l\ of\ %L\ [%p%%]\ -\ Col:\ %c%V%)
-  set statusline+=%=%-14.(Line:\ %l\/\%L\ -\ Col:\ %c%V%)
-endif
+  "set statusline+=%=%-14.(Line:\ %l\/\%L\ -\ Col:\ %c%V%)
+"endif
 
 " Remove the Windows ^M
 " noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm

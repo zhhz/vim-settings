@@ -55,3 +55,7 @@ Ctrl-a
 
 " format json
 ,fj
+
+" easy motion
+,,f<char>
+

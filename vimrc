@@ -1,5 +1,5 @@
-﻿set encoding=utf-8
-set fileencoding=utf-8
+﻿set fileencoding=utf-8 " the encoding written to file
+set encoding=utf-8 " the ncoding displayed
 set bomb
 
 " Use Vim settings, rather then Vi settings (much better!).
