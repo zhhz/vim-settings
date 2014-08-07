@@ -4,8 +4,12 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dll$',
   \ }
 
-" Default to filename searches - so that appctrl will find application controller
-" let g:ctrlp_by_filename = 1
+" let g:ctrlp_working_path_mode = 'c'
+" let CtrlP scan for dotfiles and dotdirs
+let g:ctrlp_show_hidden = 1
+
+" Default to filename searches
+let g:ctrlp_by_filename = 0
 
 " We don't want to use Ctrl-p as the mapping because
 " it interferes with YankRing (paste, then hit ctrl-p)

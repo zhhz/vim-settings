@@ -10,7 +10,8 @@ set nocompatible
 " This loads all the plugins in ~/.vim/bundle
 " Use tpope's pathogen plugin to manage all other plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#incubate()
+" call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
 " ================ General Config ====================
@@ -136,7 +137,7 @@ set mousehide
 " this makes the mouse paste a block of text without formatting it(good for code)
 map <MouseMiddle> <esc>"*p">>"
 
-" external program to use for "=" command, 
+" external program to use for "=" command,
 " for a .json file, just type gg==G
 " to pretty format your JSON type of file
 au FileType json setlocal equalprg=python\ -m\ json.tool
