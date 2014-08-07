@@ -1,6 +1,5 @@
 vim-settings
 ============
-
 A quick settings for vim
 
 
@@ -9,7 +8,7 @@ F3 - toggle tag list
 F4 - screen shell vertical
 F5 - toggle paste mode
 F6 - toggle column
-<!-- F7 - toggle background -->
+F7 - insert current date and time
 
 ,bd - delete current buffer
 ,be - buffer explorer
