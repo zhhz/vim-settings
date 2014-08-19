@@ -15,6 +15,8 @@ F7 - insert current date and time
 ,bs - horizen split open
 ,bv - vertical split open
 
+,rts - remove trailing space
+
 :sp - horizon split
 :vs - vertical split
 C-W c  or Ctrl + c - close a window

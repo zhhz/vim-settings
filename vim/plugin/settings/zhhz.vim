@@ -151,3 +151,11 @@ endfunction
 " insert current data and time
 :nnoremap <F7> "=strftime("%c")<CR>P
 :inoremap <F7> <C-R>=strftime("%c")<CR>
+
+
+" Removes trailing spaces
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
