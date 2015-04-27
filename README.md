@@ -60,3 +60,8 @@ Ctrl-a
 " easy motion
 ,,f<char>
 
+
+" visual find and replace
+,fr
+  - normal model
+  - range
