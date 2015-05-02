@@ -15,6 +15,7 @@ call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
 " ================ General Config ====================
+set ff=unix
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set complete=.,w,b,u,U,t,i,d    "Do lots of scanning on tab completion

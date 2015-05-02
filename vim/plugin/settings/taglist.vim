@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""
 " Tag list (ctags)
 """"""""""""""""""""""""""""""
-let Tlist_Ctags_Cmd = "/Users/zhonghai/Programs/bin/ctags"
+let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_Use_Right_Window=1
 let Tlist_Enable_Fold_Column=0
 let Tlist_Compact_Format=0

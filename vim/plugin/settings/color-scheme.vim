@@ -1,5 +1,14 @@
-set background=dark
+""set background=dark
 colorscheme solarized
+""colorscheme blacklight
+""colorscheme blink
+""colorscheme BusyBee
+""colorscheme corporation
+""colorscheme DimGreens
+""colorscheme inkpot
+""colorscheme jellybeans
+""colorscheme sahara
+""colorscheme SolarizedDark
 
 " hi! link txtBold Identifier
 " hi! link zshVariableDef Identifier
