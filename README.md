@@ -4,6 +4,7 @@ A quick settings for vim
 
 
 F2 - toggle NERDTree
+    SHIFT-O - open all the folders
 
 F3 - toggle tag list
 
