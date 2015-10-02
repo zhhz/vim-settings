@@ -1,3 +1,5 @@
+set ttyfast
+set lazyredraw
 set fileencoding=utf-8 " the encoding written to file
 set encoding=utf-8 " the ncoding displayed
 set bomb

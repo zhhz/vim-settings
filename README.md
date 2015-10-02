@@ -92,3 +92,6 @@ Ctrl-a
 " default formating
 
 =G
+
+vim -u NONE " this will start vim without vimrc, very useful for debuging to see if you vimrc messed up
+vim --noplugin " same as above
