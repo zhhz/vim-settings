@@ -1,7 +1,8 @@
 " let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|build|vendor|dist|node_modules)$',
-  \ 'file': '\.exe$\|\.so$\|\.dll$',
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|build|vendor|dist|node_modules|jspm_packages)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
   \ }
 
 " let g:ctrlp_working_path_mode = 'c'
