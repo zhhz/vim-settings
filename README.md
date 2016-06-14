@@ -110,6 +110,7 @@ Full path fuzzy __file__, __buffer__, __mru__, __tag__, __...__ finder for Vim.
 vim -u NONE " this will start vim without vimrc, very useful for debuging to see if you vimrc messed up
 vim --noplugin " same as above
 
+" Trag plugin
 <Leader>r# ... Trag the word under cursor
 <Leader>r. ... :Trag command-line
 <Leader>r+ ... Show quickfixlist via |:Tragcw|
@@ -121,3 +122,7 @@ vim --noplugin " same as above
                |g:trag_kinds| and <cword> is the word under cursor. 
                "-x=i" (exclude commented text) is only added if kind x is 
                in |g:trag_kinds_ignored_comments|.
+
+" surounding plugin
+csw" - adds "" to current word
+cs'" - change current word's surounding from ' to "
