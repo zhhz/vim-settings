@@ -91,10 +91,16 @@ vmap ,{ c{<C-R>"}<ESC>
 imap <silent> <C-l> <space>=><space>
 " create <%= foo %> erb tags using Ctrl-k in edit mode
 " imap <silent> <C-K> <%=  %><Esc>2hi
-imap <silent> <C-K> <space>-><space>
 " create <%= foo %> erb tags using Ctrl-j in edit mode
 " imap <silent> <C-J> <%  %><Esc>2hi
-imap <silent> <C-J> <space>\|<space>
+
+" mapings for elm
+imap <silent> <C-O> <space>\|<space>
+imap <silent> <C-U> <space>\|><space>
+
+imap <silent> <C-J> <space>=<cr>
+imap <silent> <C-K> <space>-><space>
+imap <silent> <C-H> <space>-><cr>
 
 "Go to last edit location with ,.
 nnoremap ,. '.
