@@ -96,7 +96,7 @@ imap <silent> <C-l> <space>=><space>
 
 " mapings for elm
 imap <silent> <C-O> <space>\|<space>
-imap <silent> <C-U> <space>\|><space>
+imap <silent> <C-U> \|><space>
 
 imap <silent> <C-J> <space>=<cr>
 imap <silent> <C-K> <space>-><space>
