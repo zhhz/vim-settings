@@ -52,14 +52,17 @@ snippet tea
 	module `substitute(substitute(expand('%:r'), '[/\\]','.','g'),'^\%(\l*\.\)\?','','')` exposing (${1})
 	${0}
 
+	import Html exposing (Html, div, text)
+
 	-- MODEL
 
 	type alias Model =
-	  String
+		{ id : String
+		}
 
 	init : (Model, Cmd Msg)
 	init =
-		("Hello", Cmd.none)
+		( { id = "Hello World" }, Cmd.none)
 
 
 	-- MESSAGE
@@ -73,7 +76,7 @@ snippet tea
 	view : Model -> Html Msg
 	view model =
 		div []
-			[text model]
+			[text model.id]
 
 
 	-- UPDATE
