@@ -145,3 +145,13 @@ map <MouseMiddle> <esc>"*p">>"
 " for a .json file, just type gg==G
 " to pretty format your JSON type of file
 au FileType json setlocal equalprg=python\ -m\ json.tool
+
+" ====== TAG JUMPING ================================
+" I'm not using this because I have ctag plug in f3
+" Create the 'tags' file (may need to install ctags first, $ brew install ctags
+command! MakeTags !ctags -R .
+
+" Now we can:
+" - user ^} to jump to tag under cursor
+" - use g^} for ambiguous tags
+" - user ^t to jump back up the tag stack

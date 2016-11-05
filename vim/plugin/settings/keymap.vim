@@ -87,20 +87,14 @@ map ,{ ysiw{
 vmap ,} c{ <C-R>" }<ESC>
 vmap ,{ c{<C-R>"}<ESC>
 
-" gary bernhardt's hashrocket
-imap <silent> <C-l> <space>=><space>
-" create <%= foo %> erb tags using Ctrl-k in edit mode
-" imap <silent> <C-K> <%=  %><Esc>2hi
-" create <%= foo %> erb tags using Ctrl-j in edit mode
-" imap <silent> <C-J> <%  %><Esc>2hi
-
-" mapings for elm
-imap <silent> <C-O> <space>\|<space>
-imap <silent> <C-U> \|><space>
-
-imap <silent> <C-J> <space>=<cr>
+" |>
+imap <silent> <C-H> <space>\|><space>
+" <%= foo %>
+imap <silent> <C-J> <%=  %><Esc>2hi
+" small arrow ->
 imap <silent> <C-K> <space>-><space>
-imap <silent> <C-H> <space>-><cr>
+" big arrow =>
+imap <silent> <C-l> <space>=><space>
 
 "Go to last edit location with ,.
 nnoremap ,. '.
