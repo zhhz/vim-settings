@@ -4,10 +4,10 @@ https://github.com/scrooloose/nerdcommenter.git
 https://github.com/Shougo/neocomplcache.git
 https://github.com/nathanaelkane/vim-indent-guides
 https://github.com/kien/ctrlp.vim
+https://github.com/tpope/vim-fugitive.git
 https://github.com/corntrace/bufexplorer.git
 https://github.com/tpope/vim-surround.git
 https://github.com/tpope/vim-endwise.git
-https://github.com/vim-scripts/taglist.vim.git
 https://github.com/vim-scripts/YankRing.vim
 https://github.com/vim-scripts/TeTrIs.vim.git
 https://github.com/skwp/vim-conque
@@ -17,7 +17,8 @@ https://github.com/vim-scripts/closetag.vim.git
 https://github.com/ervandew/supertab.git
 https://github.com/zhhz/dwm.vim.git
 https://github.com/Lokaltog/vim-easymotion.git
-https://github.com/bling/vim-airline
+https://github.com/vim-airline/vim-airline.git
+https://github.com/vim-airline/vim-airline-themes.git
 https://github.com/editorconfig/editorconfig-vim.git
 https://github.com/osyo-manga/vim-over
 https://github.com/tomtom/tlib_vim.git
@@ -28,3 +29,7 @@ https://github.com/lambdatoast/elm.vim.git
 https://github.com/tomtom/tlib_vim.git
 https://github.com/tomtom/trag_vim.git
 https://github.com/sheerun/vim-polyglot
+https://github.com/ludovicchabant/vim-gutentags.git
+https://github.com/neomake/neomake.git
+https://github.com/c-brenn/phoenix.vim.git
+https://github.com/tpope/vim-projectionist.git

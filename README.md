@@ -1,3 +1,16 @@
+1. clone the repo
+2. $ vimsettings install
+3. install air-line fonts
+4. brew install ctags
+5. $ ctags -R . NOTE: in your project folder
+6. 
+
+
+NOTE:
+1. the ctags config is only for exlixir
+2. good reference: https://bitboxer.de/2016/11/13/vim-for-elixir/
+
+
 vim-settings
 ============
 A quick settings for vim
@@ -126,3 +139,7 @@ vim --noplugin " same as above
 " surounding plugin
 csw" - adds "" to current word
 cs'" - change current word's surounding from ' to "
+
+
+" jumping around tags or definitions
+Ctrl-]

@@ -66,9 +66,10 @@ vimify () {
 install () {
   backup
 
-  # symbol link vimrc and vim
+  # symbol link vimrc, vim and ctags
   ln -s $DIR/vimrc ~/.vimrc
   ln -s $DIR/vim ~/.vim
+  ln -s $DIR/ctags ~/.ctags
 
   # add in bundles from bundles
   mkdir -p $DIR/vim/bundle
