@@ -1,2 +1,148 @@
+#!/bin/bash
+
+# shamelessly c&p most of the code from quick-vim, will contribute back
+
+set -e
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+help () {
+  cat<<EOF
+
+Usage: vimsettings [install|uninstall|upgrade|help]
+
+Commands:
+
+  install    installs from the git repo
+  uninstall  restores original system vim config
+  upgrade    clobbers existing setup and installs fresh from git
+  help       print this msg
+
+EOF
+}
+
+# backs default home vim up
+backup () {
+  if [ -e $DIR/backup ]
+  then
+    echo 'skipping backup'
+  else
+    mkdir -p $DIR/backup
+
+    if [ -e ~/.vimrc ]
+    then
+      mv ~/.vimrc $DIR/backup/.vimrc
+    fi
+
+    if [ -e ~/.vim ]
+    then
+      mv ~/.vim $DIR/backup/.vim
+    fi
+
+    if [ -e ~/.editrc ]
+    then
+      mv ~/.editrc $DIR/backup/.editrc
+    fi
+
+    if [ -e ~/.inputrc ]
+    then
+      mv ~/.inputrc $DIR/backup/.inputrc
+    fi
+
+    if [ -e ~/.tmux.conf ]
+    then
+      mv ~/.tmux.conf $DIR/backup/.tmux.conf
+    fi
+  fi
+}
+
+# vimify
+vimify () {
+  # symbol link vimrc and vim
+  ln -s $DIR/vimify/editrc ~/.editrc
+  ln -s $DIR/vimify/inputrc  ~/.inputrc
+}
+
+# copy in pathogen and then clone in bundles
+install () {
+  backup
+
+  # symbol link vimrc and vim
+  ln -s $DIR/vimrc ~/.vimrc
+  ln -s $DIR/vim ~/.vim
+
+  # add in bundles from bundles
+  mkdir -p $DIR/vim/bundle
+  bundles=$(cat $DIR/bundles)
+  cd $DIR/vim/bundle
+
+  # error handling here
+  for repo in $bundles; do
+    git clone $repo
+  done
+
+  vimify
+}
+
+# if backup exists clobbers home vim and copies in backup
+uninstall () {
+  if [ -e $DIR/backup ]
+  then
+    if [ -e ~/.vimrc ]
+    then
+      rm ~/.vimrc
+    fi
+
+    if [ -e ~/.vim ]
+    then
+      rm ~/.vim
+    fi
+
+    if [ -e $DIR/backup/.vimrc ]
+    then
+      mv $DIR/backup/.vimrc ~/.vimrc
+    fi
+
+    if [ -e $DIR/backup/.vim ]
+    then
+      mv $DIR/backup/.vim ~/.vim
+    fi
+
+    if [ -e $DIR/backup/.editrc ]
+    then
+      mv $DIR/backup/.editrc ~/.editrc
+    fi
+
+    if [ -e $DIR/backup/.inputrc ]
+    then
+      mv $DIR/backup/.inputrc ~/.inputrc
+    fi
+
+    rm -rf $DIR/backup
+    rm -rf $DIR/vim/bundle
+    rm -rf $DIR/vim/backups
+  fi
+}
+
+# kills everything, pulls latest from git, installs it
+upgrade () {
+  uninstall
+  git pull
+  install
+}
+
+# bash, test for a valid arg and execute it if so; otherwise show the help
+if [ "$1" != "" ]; then
+  wl=(install uninstall upgrade help)
+  for i in "${wl[@]}"
+  do
+    if [ "$i" == "$1" ]
+    then
+      $1
+      exit 0
+    fi
+  done
+fi
+
+# show a flailer some help
 help
 exit 0

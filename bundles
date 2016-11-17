@@ -16,7 +16,6 @@ https://github.com/godlygeek/tabular
 https://github.com/vim-scripts/closetag.vim.git
 https://github.com/ervandew/supertab.git
 https://github.com/zhhz/dwm.vim.git
-https://github.com/tpope/vim-fugitive.git
 https://github.com/Lokaltog/vim-easymotion.git
 https://github.com/bling/vim-airline
 https://github.com/editorconfig/editorconfig-vim.git
@@ -24,8 +23,8 @@ https://github.com/osyo-manga/vim-over
 https://github.com/tomtom/tlib_vim.git
 https://github.com/MarcWeber/vim-addon-mw-utils.git
 https://github.com/garbas/vim-snipmate.git
-https://github.com/pangloss/vim-javascript.git
+https://github.com/elixir-lang/vim-elixir
+https://github.com/lambdatoast/elm.vim.git
 https://github.com/tomtom/tlib_vim.git
 https://github.com/tomtom/trag_vim.git
-https://github.com/ElmCast/elm-vim
-https://github.com/elixir-lang/vim-elixir
+https://github.com/sheerun/vim-polyglot
