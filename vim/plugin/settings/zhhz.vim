@@ -44,37 +44,6 @@ map <F6> :call <SID>ToggleColorColumn()<cr>
 """"""""""""""""""""""""""""""
 set laststatus=2
 
-function! CurDir()
-  let curdir = substitute(getcwd(), '/Users/zhonghai/', "~/", "g")
-  return curdir
-endfunction
-
-"Format the statusline
-"set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
-"set statusline=\ %F%m%r%h\ %w\ Line:\ %l/%L:%c
-" set statusline=\ %F%m%r%h\ %w%{fugitive#statusline()}\ Line:\ %l/%L:%c
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-"set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-"
-"commented out in favor of vim-airline
-"if has('statusline')
- " set statusline=%<%f\ 
- " set statusline+=%w%h%m%r 
-  "set statusline+=\ [%{&ff}/%Y]  
-  "set statusline+=\ [%{getcwd()}]
-  " set statusline+=\ [%{CurDir()}]
-  " set statusline+=%{fugitive#statusline()}
-  " set statusline+=%=%-14.(Line:\ %l\ of\ %L\ [%p%%]\ -\ Col:\ %c%V%)
-  "set statusline+=%=%-14.(Line:\ %l\/\%L\ -\ Col:\ %c%V%)
-"endif
-
-" Remove the Windows ^M
-" noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-" this works for me:
-" :%s//\r/g
-" NOTE: to input , you have to press ctrl + v then followed by ctrl + m
 
 " http://concisionandconcinnity.blogspot.com/2009/07/vim-part-ii-matching-pairs.html
 "Map the auto-close for non-quotes.
