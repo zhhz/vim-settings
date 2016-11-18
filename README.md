@@ -19,7 +19,7 @@ A quick settings for vim
 F2 - toggle NERDTree
     SHIFT-O - open all the folders
 
-F3 - toggle tag list
+F3 - toggle zoom window
 
 F4 - screen shell vertical
 
@@ -64,12 +64,8 @@ ii - in edit mode, this is mapped to ESC
 
 ,te
 
-" refresh firefox browser
-
-,r
 
 " split a bash console
-
 ,cb
 
 " surround
@@ -85,26 +81,23 @@ ii - in edit mode, this is mapped to ESC
 Ctrl-a
 
 " show git diff gugger
-
 ,g
 
-" format json
 
+" format json
 ,fj
 
-" easy motion
 
+" easy motion
 ,,f<char>
 
 
 " visual find and replace
-
 ,fr
   - normal model
   - range
 
 " default formating
-
 =G
 
 ## ctrl-p
@@ -123,19 +116,6 @@ Full path fuzzy __file__, __buffer__, __mru__, __tag__, __...__ finder for Vim.
 vim -u NONE " this will start vim without vimrc, very useful for debuging to see if you vimrc messed up
 vim --noplugin " same as above
 
-" Trag plugin
-<Leader>r# ... Trag the word under cursor
-<Leader>r. ... :Trag command-line
-<Leader>r+ ... Show quickfixlist via |:Tragcw|
-<Leader>r* ... Edit a file from the files list, i.e. the list that would be
-               used if no "--file_sources" argument were passed to 
-               |:Trag|
-<Leader>rx ... The same as `:Trag -l -i=x -x=i <cword><cr>`
-               where x is a alphabetical letter that describes a kind in 
-               |g:trag_kinds| and <cword> is the word under cursor. 
-               "-x=i" (exclude commented text) is only added if kind x is 
-               in |g:trag_kinds_ignored_comments|.
-
 " surounding plugin
 csw" - adds "" to current word
 cs'" - change current word's surounding from ' to "
@@ -143,3 +123,14 @@ cs'" - change current word's surounding from ' to "
 
 " jumping around tags or definitions
 Ctrl-]
+
+" ack integration
+:Ack 'patter'
+
+
+" zoom window
+<C-W> o  " toggle
+or <F3> toggle
+
+" quick buffer switch
+,z/,x go next or back buffer

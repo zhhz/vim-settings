@@ -66,9 +66,9 @@ set hlsearch         "Hilight searches by default
 " ================ Turn Off Swap Files ==============
 " Set temporary directory (don't litter local dir with swp/tmp files)
 set directory=/tmp
-" set noswapfile
-" set nobackup
-" set nowb
+set noswapfile
+set nobackup
+set nowb " no write backup
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -147,11 +147,8 @@ map <MouseMiddle> <esc>"*p">>"
 au FileType json setlocal equalprg=python\ -m\ json.tool
 
 " ====== TAG JUMPING ================================
-" I'm not using this because I have ctag plug in f3
 " Create the 'tags' file (may need to install ctags first, $ brew install ctags
 command! MakeTags !ctags -R .
 
-" Now we can:
-" - user ^} to jump to tag under cursor
-" - use g^} for ambiguous tags
-" - user ^t to jump back up the tag stack
+" Switch spell checking language
+command! American :set spelllang=en_us
