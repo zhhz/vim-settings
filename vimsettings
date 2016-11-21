@@ -66,6 +66,8 @@ vimify () {
 install () {
   backup
 
+  prepare
+
   # symbol link vimrc, vim and ctags
   ln -s $DIR/vimrc ~/.vimrc
   ln -s $DIR/vim ~/.vim
@@ -83,6 +85,16 @@ install () {
   done
 
   vimify
+}
+
+# prepare
+prepare () {
+  rm ~/.vimrc
+  rm ~/.vim
+  rm ~/.ctags
+  rm ~/.fzf.bash
+
+  rm -rf $DIR/vim/bundle
 }
 
 # if backup exists clobbers home vim and copies in backup
