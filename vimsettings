@@ -70,6 +70,7 @@ install () {
   ln -s $DIR/vimrc ~/.vimrc
   ln -s $DIR/vim ~/.vim
   ln -s $DIR/ctags ~/.ctags
+  ln -s $DIR/fzf.bash ~/.fzf.bash
 
   # add in bundles from bundles
   mkdir -p $DIR/vim/bundle
