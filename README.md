@@ -7,8 +7,14 @@
 
 
 NOTE:
-1. the ctags config is only for exlixir
+1. the ctags config
 2. good reference: https://bitboxer.de/2016/11/13/vim-for-elixir/
+
+^]    Jump to definition
+^t    Jump back from definition
+^W }    Preview definition
+g]    See all definitions
+
 
 
 vim-settings
