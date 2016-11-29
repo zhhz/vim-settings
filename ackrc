@@ -1,0 +1,13 @@
+--ignore-dir=deps
+--ignore-dir=_build
+--ignore-dir=priv/static
+--ignore-dir=log
+--ignore-dir=doc
+--ignore-dir=tmp
+--ignore-file=is:.tags
+--ignore-file=is:.keep
+--ignore-dir=.git
+--color
+--follow
+--group
+--sort-files
