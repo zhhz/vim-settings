@@ -1,3 +1,6 @@
+: MakeTags
+should do it
+
 ctags-elixir
 ============
 

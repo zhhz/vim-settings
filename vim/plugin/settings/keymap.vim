@@ -18,6 +18,9 @@ nmap <leader>w :w!<cr>
 " If I forgot to sudo vim a file, do that with :w!!
 cmap w!! %!sudo tee > /dev/null %
 
+" run ACK rac.vim
+nnoremap <silent> <C-f> :Ack<space>
+
 " ==============================
 " Window/Tab/Split Manipulation
 " ==============================
@@ -88,7 +91,7 @@ vmap ,} c{ <C-R>" }<ESC>
 vmap ,{ c{<C-R>"}<ESC>
 
 " |>
-imap <silent> <C-H> <space>\|><space>
+imap <silent> <C-H> \|><space>
 " <%= foo %>
 imap <silent> <C-J> <%=  %><Esc>2hi
 " small arrow ->
