@@ -6,7 +6,7 @@ let mapleader = ","
 " cmap ii <C-[>
 
 "Fast reloading of the .vimrc
-map <leader>s :source ~/.vimrc<cr>
+" "map <leader>s :source ~/.vimrc<cr>
 "Fast editing of .vimrc
 map <leader>e :e! ~/.vimrc<cr>
 "When .vimrc is edited, reload it
@@ -19,7 +19,8 @@ nmap <leader>w :w!<cr>
 cmap w!! %!sudo tee > /dev/null %
 
 " run ACK rac.vim
-nnoremap <silent> <C-f> :Ack<space>
+" nnoremap <silent> <C-f> :Ack<space>
+map <leader>s :Ack!<space>
 
 " ==============================
 " Window/Tab/Split Manipulation
