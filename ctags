@@ -18,6 +18,8 @@
 --exclude=*.spec.js
 --exclude=vendor
 --exclude=*.min.js
+--exclude=dist
+--exclude=**/*-bundle.js
 
 
 --langdef=Elixir
