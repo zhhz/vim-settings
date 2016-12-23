@@ -1,6 +1,6 @@
 " let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|build|vendor|dist|node_modules|jspm_packages)$',
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|build|_build|deps|vendor|dist|node_modules|jspm_packages)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
