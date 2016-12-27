@@ -4,8 +4,11 @@
 --ignore-dir=log
 --ignore-dir=doc
 --ignore-dir=tmp
+--ignore-dir=dist
 --ignore-file=is:.tags
 --ignore-file=is:.keep
+--ignore-file=match:-min.js
+--ignore-file=match:-bundle.js
 --ignore-dir=.git
 --color
 --follow
