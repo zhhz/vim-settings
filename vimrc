@@ -3,6 +3,7 @@ set lazyredraw
 set fileencoding=utf-8 " the encoding written to file
 set encoding=utf-8 " the ncoding displayed
 set bomb
+set clipboard=unnamed
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
