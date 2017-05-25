@@ -91,10 +91,13 @@ map ,{ ysiw{
 vmap ,} c{ <C-R>" }<ESC>
 vmap ,{ c{<C-R>"}<ESC>
 
-" |>
-imap <silent> <C-H> \|><space>
 " <%= foo %>
-imap <silent> <C-J> <%=  %><Esc>2hi
+" imap <silent> <C-J> <%=  %><Esc>2hi
+
+" |>
+imap <silent> <C-J> \|><space>
+" <-
+imap <silent> <C-H> <space><-<space>
 " small arrow ->
 imap <silent> <C-K> <space>-><space>
 " big arrow =>
