@@ -30,6 +30,8 @@ set autoread                    "Reload files changed outside vim
 set gcr=a:blinkon0              "Disable cursor blink
 " set mat=2                       "How many tenths of a second to blink
 set nobomb                      "get rid of <U+FEFF> that is the BOM of UTF8 files
+" set autowriteall              "Save file when switch buffers
+au FocusLost * update           "Update writes only when the file is actually changed
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.

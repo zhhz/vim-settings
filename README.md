@@ -15,96 +15,103 @@ NOTE:
 ^W }    Preview definition
 g]    See all definitions
 
+In edit mode
+^p / ^n - complete base on previous/next content
 
+^x^] - code, auto complete (need ctag running)
+^x^f - filename completion
+^x^[]
+
+^o / ^i / ^t - jump back and force
 
 vim-settings
 ============
 A quick settings for vim
 
 
-F2 - toggle NERDTree
+* F2 - toggle NERDTree
     SHIFT-O - open all the folders
 
-F3 - toggle zoom window
+* F3 - toggle zoom window
 
-F4 - screen shell vertical
+* F4 - screen shell vertical
 
-F5 - toggle paste mode
+* F5 - toggle paste mode
 
-F6 - toggle column
+* F6 - toggle column
 
-F7 - insert current date and time
+* F7 - insert current date and time
 
-,bd - delete current buffer
+* ,bd - delete current buffer
 
-,be - buffer explorer
+* ,be - buffer explorer
 
-,bs - horizen split open
+* ,bs - horizen split open
 
-,bv - vertical split open
+* ,bv - vertical split open
 
-,rts - remove trailing space
+* ,rts - remove trailing space
 
-:sp - horizon split
+* :sp - horizon split
 
-:vs - vertical split
+* :vs - vertical split
 
-C-W c  or Ctrl + c - close a window
+* C-W c  or Ctrl + c - close a window
 
-CTRL + h/j/k/l - move between windows
+* CTRL + h/j/k/l - move between windows
 
 " not work on iterm2
-META + h/j/k/l - resize windows with the mata/option key
+* META + h/j/k/l - resize windows with the mata/option key
 
-CTRL + n - stack current and open a new window and focus on it
+* CTRL + n - stack current and open a new window and focus on it
 
-CTRL + space - focus on current window
+* CTRL + space - focus on current window
 
-ii - in edit mode, this is mapped to ESC
+* ii - in edit mode, this is mapped to ESC
 
-,ig - toggle indent
+* ,ig - toggle indent
 
-,y  - yangk ring
+* ,y  - yangk ring
 
-" teris game
+* " teris game
 
-,te
-
-
-" split a bash console
-,cb
-
-" surround
-
-,#",)([{
-
-"Go to last edit location with ,.
-
-,.
-
-" the insert mode the first quote will autoclose so you'll get 'foo' and hitting <c-a> will put the cursor right after the quote
-
-Ctrl-a
-
-" show git diff gugger
-,g
+* ,te
 
 
-" format json
-,fj
+* " split a bash console
+* ,cb
+
+* " surround
+
+* ,#",)([{
+
+* "Go to last edit location with ,.
+
+* ,.
+
+* " the insert mode the first quote will autoclose so you'll get 'foo' and hitting <c-a> will put the cursor right after the quote
+
+* Ctrl-a
+
+* " show git diff gugger
+* ,g
 
 
-" easy motion
-,,f<char>
+* " format json
+* ,fj
 
 
-" visual find and replace
-,fr
-  - normal model
-  - range
+* " easy motion
+* ,,f<char>
 
-" default formating
-=G
+
+* " visual find and replace
+* ,fr
+*   - normal model
+*   - range
+
+* " default formating
+* =G
 
 ## ctrl-p
 Full path fuzzy __file__, __buffer__, __mru__, __tag__, __...__ finder for Vim.
