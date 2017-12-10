@@ -1,0 +1,39 @@
+snippet imp
+	import ${0:List}
+snippet impf
+	import ${1:_} from '${0:lodash}';
+snippet cmp
+	import React from 'react';
+	import PropTypes from 'prop-types';
+
+	class ${1:`substitute(substitute(expand('%:r'), '[/\\]','.','g'),'^\%(\l*\.\)\?','','')`} extends React.Component {
+		static propTypes = {}
+		state = {}
+
+		componentDidMount() {}
+		componentWillReceiveProps(nextProps) {}
+		componentWillUnmount() {}
+		componentDidMount() {}
+
+		render() {
+			return(
+				${0}
+			);
+		}
+	}
+
+	export default $1;
+snippet fcmp
+	import React from 'react';
+	import PropTypes from 'prop-types';
+
+	const ${1:`substitute(substitute(expand('%:r'), '[/\\]','.','g'),'^\%(\l*\.\)\?','','')`} = props => {
+		return (
+			${0}
+		)
+	}
+
+	$1.propTypes = {}
+	$1.state = {}
+
+	export default $1;
