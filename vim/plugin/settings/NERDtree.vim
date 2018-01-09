@@ -6,7 +6,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 let NERDTreeMinimalUI  = 1
 let NERDTreeDirArrows  = 0
-let NERDTreeShowHidden = 0 
+let NERDTreeShowHidden = 0
 let NERDTreeIgnore=['\~$', '\.DS_Store']
 let NERDTreeChDirMode=2
 

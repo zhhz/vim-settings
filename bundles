@@ -25,11 +25,10 @@ https://github.com/MarcWeber/vim-addon-mw-utils.git
 https://github.com/tomtom/tlib_vim.git
 https://github.com/garbas/vim-snipmate.git
 https://github.com/elixir-lang/vim-elixir
-https://github.com/lambdatoast/elm.vim.git
+https://github.com/slashmili/alchemist.vim.git
+https://github.com/c-brenn/phoenix.vim.git
 https://github.com/sheerun/vim-polyglot
 https://github.com/ludovicchabant/vim-gutentags.git
-https://github.com/neomake/neomake.git
-https://github.com/c-brenn/phoenix.vim.git
 https://github.com/tpope/vim-projectionist.git
 https://github.com/mileszs/ack.vim.git
 https://github.com/troydm/zoomwintab.vim.git
