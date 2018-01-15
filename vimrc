@@ -129,7 +129,8 @@ set sidescroll=1
 " Explicitly set 256 color support
 set t_Co=256
 
-set cursorline
+" have to disable it, otherwise the performace is bad
+" set cursorline
 
 " integrate ack and vim by using the :grep function of vim
 set grepprg=ack
