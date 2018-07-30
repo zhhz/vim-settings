@@ -39,9 +39,9 @@ You should be able see something like following:
 
 
 
-| App Name          |      Are      |  Cool |
-|-------------------|:-------------:|------:|
-| mobile-middletier |  left-aligned | $1600 |
+| App Name          | id  | mode   |
+|-------------------|:---:|:------:|
+| mobile-middletier | 0   | $1600  |
 
 
 ## Availible Routes
