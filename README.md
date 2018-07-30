@@ -36,6 +36,12 @@ App name │ id | mode | pid  | status | restart | uptime | cpu
 --- | --- | --- | --- | --- | --- | --- | ---
 mobile-middletier | 0 | cluster | 6713 | online | 0 | 4h | 0%
 
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
 
 ## Availible Routes
 ```GET /api/v3/philly/```
