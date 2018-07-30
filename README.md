@@ -32,9 +32,12 @@ $ pm2 list
 
 You should be able see something like following:
 
-App name │ id | mode | pid  | status | restart | uptime | cpu
---- | --- | --- | --- | --- | --- | --- | ---
-mobile-middletier | 0 | cluster | 6713 | online | 0 | 4h | 0%
+|    App name       │ id  | mode    | pid  | status | restart | uptime | cpu |
+|-------------------|:---:|:-------:|:----:|:------:|:-------:|:------:|:---:|
+| mobile-middletier | 0   | cluster | 6713 | online |  0      | 4h     | 0%  |
+
+
+
 
 | Tables   |      Are      |  Cool |
 |----------|:-------------:|------:|
