@@ -24,6 +24,30 @@ In edit mode
 
 ^o / ^i / ^t - jump back and force
 
+
+### verify the service is runing
+```sh
+$ pm2 list
+```
+
+You should be able see something like following:
+
+App name │ id | mode | pid  | status | restart | uptime | cpu
+--- | --- | --- | --- | --- | --- | --- | ---
+mobile-middletier | 0 | cluster | 6713 | online | 0 | 4h | 0%
+
+
+## Availible Routes
+```GET /api/v3/philly/```
+This endpoint is primarily used to get section list
+
+```GET /api/v3/philly/home```
+This endpoint is primarily used to get the home articles
+
+```GET /api/v3/philly/[news|sports...]```
+This endpoint is primarily used to get section articles
+
+
 vim-settings
 ============
 A quick settings for vim
