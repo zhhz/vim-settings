@@ -39,11 +39,9 @@ You should be able see something like following:
 
 
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+| App Name          |      Are      |  Cool |
+|-------------------|:-------------:|------:|
+| mobile-middletier |  left-aligned | $1600 |
 
 
 ## Availible Routes
