@@ -32,16 +32,9 @@ $ pm2 list
 
 You should be able see something like following:
 
-|    App name       │ id  | mode    | pid  | status | restart | uptime | cpu |
-|-------------------|:---:|:-------:|:----:|:------:|:-------:|:------:|:---:|
-| mobile-middletier | 0   | cluster | 6713 | online |  0      | 4h     | 0%  |
-
-
-
-
-| App Name          | id  | mode   | mode   | mode   | mode   | mode   | mode   |
-|-------------------|:---:|:------:|:------:|:------:|:------:|:------:|:------:|
-| mobile-middletier | 0   | $1600  | $1600  | $1600  | $1600  | $1600  | $1600  |
+| App Name          | id  | mode   | pid   | status | restart | uptime | cpu |
+|-------------------|:---:|:------:|:-----:|:------:|:-------:|:------:|:---:|
+| mobile-middletier | 0   | $1600  | 6713  | online | 0       | 4h     | 0%  |
 
 
 ## Availible Routes
