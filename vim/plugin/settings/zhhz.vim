@@ -121,6 +121,8 @@ endfunction
 :nnoremap <F7> "=strftime("%c")<CR>P
 :inoremap <F7> <C-R>=strftime("%c")<CR>
 
+" Open markdown files with Chrome.
+autocmd BufEnter *.md exe 'noremap <F5> :!open -a "Google Chrome.app" %:p<CR>'
 
 " Removes trailing spaces
 function! TrimWhiteSpace()

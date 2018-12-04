@@ -3,7 +3,6 @@
 3. install air-line fonts
 4. brew install ctags
 5. $ ctags -R . NOTE: in your project folder
-6. 
 
 
 NOTE:
@@ -23,29 +22,6 @@ In edit mode
 ^x^[]
 
 ^o / ^i / ^t - jump back and force
-
-
-### verify the service is runing
-```sh
-$ pm2 list
-```
-
-You should be able see something like following:
-
-| App Name          | id  | mode   | pid   | status | restart | uptime | cpu |
-|-------------------|:---:|:------:|:-----:|:------:|:-------:|:------:|:---:|
-| mobile-middletier | 0   | $1600  | 6713  | online | 0       | 4h     | 0%  |
-
-
-## Availible Routes
-```GET /api/v3/philly/```
-This endpoint is primarily used to get section list
-
-```GET /api/v3/philly/home```
-This endpoint is primarily used to get the home articles
-
-```GET /api/v3/philly/[news|sports...]```
-This endpoint is primarily used to get section articles
 
 
 vim-settings
