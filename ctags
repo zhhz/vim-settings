@@ -20,6 +20,7 @@
 --exclude=*.min.js
 --exclude=dist
 --exclude=**/*-bundle.js
+--exclude=.serverless
 
 
 --langdef=Elixir
