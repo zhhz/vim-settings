@@ -6,11 +6,15 @@
 --ignore-dir=tmp
 --ignore-dir=dist
 --ignore-dir=coverage
+--ignore-dir=node_modules
 --ignore-file=is:.tags
 --ignore-file=is:.keep
 --ignore-file=match:-min.js
 --ignore-file=match:-bundle.js
 --ignore-dir=.git
+--ignore-dir=.serverless
+--ignore-dir=.webpack
+--ignore-dir=.dynamodb
 --color
 --follow
 --group
