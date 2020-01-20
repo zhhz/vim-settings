@@ -4,10 +4,12 @@
 4. brew install ctags
 5. $ ctags -R . NOTE: in your project folder
 
-
 NOTE:
+$brew install ctags
 1. the ctags config
 2. good reference: https://bitboxer.de/2016/11/13/vim-for-elixir/
+3. sometime you have to give the full path
+  $ /usr/local/bin/ctags -R .
 
 ^]    Jump to definition
 ^t    Jump back from definition
