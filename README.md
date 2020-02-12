@@ -149,3 +149,8 @@ or <F3> toggle
 
 " quick buffer switch
 ,z/,x go next or back buffer
+
+
+" tabuluar plugin
+  :Tab/:
+  :Tab/:\zs
