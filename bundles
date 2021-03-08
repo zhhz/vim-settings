@@ -5,7 +5,7 @@ https://github.com/Shougo/neocomplcache.git
 https://github.com/nathanaelkane/vim-indent-guides
 https://github.com/kien/ctrlp.vim
 https://github.com/tpope/vim-fugitive.git
-https://github.com/corntrace/bufexplorer.git
+https://github.com/zhhz/bufexplorer.git
 https://github.com/tpope/vim-surround.git
 https://github.com/tpope/vim-endwise.git
 https://github.com/vim-scripts/YankRing.vim
@@ -24,9 +24,7 @@ https://github.com/osyo-manga/vim-over
 https://github.com/MarcWeber/vim-addon-mw-utils.git
 https://github.com/tomtom/tlib_vim.git
 https://github.com/garbas/vim-snipmate.git
-https://github.com/elixir-lang/vim-elixir
 https://github.com/slashmili/alchemist.vim.git
-https://github.com/c-brenn/phoenix.vim.git
 https://github.com/sheerun/vim-polyglot
 https://github.com/ludovicchabant/vim-gutentags.git
 https://github.com/tpope/vim-projectionist.git

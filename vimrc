@@ -157,3 +157,5 @@ command! MakeTags !ctags -R .
 
 " Switch spell checking language
 command! American :set spelllang=en_us
+autocmd BufEnter *.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | :bw
+

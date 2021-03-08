@@ -117,7 +117,7 @@ function! FormatJSON()
   :%!python -m json.tool
 endfunction
 
-" insert current data and time
+" insert current date and time
 :nnoremap <F7> "=strftime("%c")<CR>P
 :inoremap <F7> <C-R>=strftime("%c")<CR>
 
