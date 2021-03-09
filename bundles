@@ -24,7 +24,6 @@ https://github.com/osyo-manga/vim-over
 https://github.com/MarcWeber/vim-addon-mw-utils.git
 https://github.com/tomtom/tlib_vim.git
 https://github.com/garbas/vim-snipmate.git
-https://github.com/slashmili/alchemist.vim.git
 https://github.com/sheerun/vim-polyglot
 https://github.com/ludovicchabant/vim-gutentags.git
 https://github.com/tpope/vim-projectionist.git
@@ -32,5 +31,7 @@ https://github.com/mileszs/ack.vim.git
 https://github.com/troydm/zoomwintab.vim.git
 https://github.com/tpope/vim-dispatch.git
 https://github.com/junegunn/fzf.vim.git
-https://github.com/johngrib/vim-game-code-break.git
 https://github.com/skywind3000/asyncrun.vim
+https://github.com/pangloss/vim-javascript
+https://github.com/leafgarland/typescript-vim
+https://github.com/jparise/vim-graphql

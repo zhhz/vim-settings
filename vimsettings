@@ -140,7 +140,6 @@ uninstall () {
 # kills everything, pulls latest from git, installs it
 upgrade () {
   uninstall
-  git pull
   install
 }
 
